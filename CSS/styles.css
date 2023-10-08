@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root {
+  --fs: 0.9rem;
+  --ff: 'Montserrat', sans-serif;
+
+  /* COLORS */
+  --linear-gradient: linear-gradient(to right, hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+
+  --very-light-grayish-blue: hsl(240, 78%, 98%);
+  --light-grayish-blue: hsl(234, 14%, 74%);
+  --grayish-blue: hsl(233, 13%, 49%);
+  --dark-grayish-blue: hsl(232, 13%, 33%);
+}
+
+body {
+  background-color: var(--very-light-grayish-blue);
+  font-family: var(--ff);
+  font-size: var(--fs);
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  min-height: 100vh;
+}
+
+.our__pricing {
+  text-transform: capitalize;
+  color: var(--grayish-blue);
+}
+
+.toggle-text__container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.toggle__wrapper {
+  display: flex;
+  gap: 0.2rem;
+  background-image: var(--linear-gradient);
+  width: 4rem;
+  height: 2rem;
+  border-radius: 2rem;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.toggle__btn {
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+#toggle-anually {
+  position: relative;
+}
+
+#toggle-anually::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--very-light-grayish-blue);
+  cursor: pointer;
+  transform: var(--transform, translateX(0));
+  transition: transform 0.2s ease-in-out;
+}
+
+.anually {
+  text-transform: capitalize;
+  color: var(--light-grayish-blue);
+}
+
+.boxes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 25rem;
+}
+
+.box1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+  border-radius: 0.5rem 0 0 0.5rem;
+  box-shadow: -10px 16px 20px hsla(234, 14%, 74%, 0.3);
+  width: 20rem;
+  height: 22rem;
+  padding: 1.5rem;
+}
+
+.box__heading {
+  text-transform: capitalize;
+  color: var(--grayish-blue);
+}
+
+.dollar {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 2rem;
+  color: var(--dark-grayish-blue);
+}
+
+.amount {
+  font-size: 4rem;
+}
+
+#amount1__monthly,
+#amount2__monthly,
+#amount3__monthly {
+  display: none;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--grayish-blue);
+}
+
+.list1 {
+  text-align: center;
+}
+
+.items__list:last-child {
+  margin-bottom: 0.5rem;
+}
+
+button {
+  width: 100%;
+  padding: clamp(0.50rem, calc(0.46rem + 0.19vw), 0.63rem);
+  border: none;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+}
+
+.linear-gradient {
+  background-image: var(--linear-gradient);
+  color: var(--very-light-grayish-blue);
+}
+
+.linear-gradient:is(:hover, :active) {
+  background-image: none;
+  background-color: transparent;
+  border: 1px solid hsl(237, 63%, 64%);
+  color: hsl(237, 63%, 64%);
+  transition: 0.4s ease-in-out;
+}
+
+.box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  background-image: linear-gradient(to bottom, hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.box2__heading {
+  color: var(--very-light-grayish-blue);
+}
+
+.box2__dollar {
+  color: var(--very-light-grayish-blue);
+}
+
+.box2__items {
+  color: var(--very-light-grayish-blue);
+}
+
+.box2__btn {
+  color: hsl(237, 63%, 64%);
+}
+
+.box2__btn:is(:hover, :active) {
+  background-color: transparent;
+  border: 1px solid var(--very-light-grayish-blue);
+  color: var(--very-light-grayish-blue);
+  transition: 0.3s ease-in-out;
+}
+
+.box3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+  border-radius: 0 0.5rem 0.5rem 0;
+  box-shadow: 10px 16px 20px hsla(234, 14%, 74%, 0.3);
+  width: 20rem;
+  height: 22rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 23.4rem) and (max-width: 64rem) {
+  .container  {
+    margin: clamp(3.00rem, calc(2.80rem + 0.85vw), 3.56rem) clamp(1.00rem, calc(0.93rem + 0.28vw), 1.19rem);
+  }
+}
+
+@media (max-width: 63.3rem) {
+  .boxes {
+    gap: 2rem;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    border-radius: 0.5rem;
+  }
+}

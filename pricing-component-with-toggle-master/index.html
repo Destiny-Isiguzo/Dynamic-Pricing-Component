@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/css-resets.css">
+  <link rel="stylesheet" href="../CSS/fluid-spacing.css">
+  <script src="index.js" defer></script>
+  <title>Dynamic Pricing Component</title>
+</head>
+<body>
+
+  <div class="container">
+    <!-- <img src="../pricing-component-with-toggle-master/images/bg-top.svg" alt="" class="bg-top"> -->
+
+    <h1 class="our__pricing">our pricing</h1>
+
+    <div class="toggle-text__container">
+
+      <p class="anually">anually</p>
+
+      <div class="toggle__wrapper">
+
+        <button class="toggle__btn" id="toggle-anually"></button>
+        <button class="toggle__btn" id="toggle-monthly"></button>
+
+      </div>
+
+      <p class="anually">monthly</p>
+
+    </div>
+
+    <div class="boxes">
+
+      <div class="box1">
+
+        <p class="box__heading">basic</p>
+  
+        <span class="dollar">$
+          <p class="amount" id="amount1__anually">199.99</p>
+          <p class="amount" id="amount1__monthly">19.99</p>
+        </span>
+  
+        <div class="items">
+          <p class="items__list">500 GB Storage</p>
+          <p class="items__list">2 Users Allowed</p>
+          <p class="items__list">Send up to 3 GB</p>
+        </div>
+  
+        <button class="linear-gradient">learn more</button>
+  
+      </div>
+  
+      <div class="box2">
+  
+        <p class="box__heading box2__heading">Professional</p>
+  
+        <span class="dollar box2__dollar">$
+          <p class="amount" id="amount2__anually">249.99</p>
+          <p class="amount" id="amount2__monthly">24.99</p>
+        </span>
+  
+        <div class="items box2__items">
+          <p class="items__list list1">1 TB Storage</p>
+          <p class="items__list">5 Users Allowed</p>
+          <p class="items__list">Send up to 10 GB</p>
+        </div>
+  
+        <button class="box2__btn">learn more</button>
+  
+      </div>
+  
+      <div class="box3">
+  
+        <p class="box__heading">Master</p>
+  
+        <span class="dollar">$
+          <p class="amount" id="amount3__anually">399.99</p>
+          <p class="amount" id="amount3__monthly">39.99</p>
+        </span>
+  
+        <div class="items">
+          <p class="items__list list1">2 TB Storage</p>
+          <p class="items__list">10 Users Allowed</p>
+          <p class="items__list">Send up to 20 GB</p>
+        </div>
+  
+        <button class="linear-gradient" id="btn2">learn more</button>
+  
+      </div>
+
+    </div>
+
+    <!-- <img src="../pricing-component-with-toggle-master/images/bg-bottom.svg" alt="" class="bg-bottom"> -->
+
+  </div>
+
+</body>
+</html>
